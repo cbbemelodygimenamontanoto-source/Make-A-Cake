@@ -7,9 +7,20 @@ class MenuScene extends Phaser.Scene {
   }
 
   preload() {
+
+    this.load.audio('musicaFondo', 'assets/Game.mp3');
+
   }
 
   create() {
+
+      this.musica = this.sound.add('musicaFondo', {
+        loop: true,
+        volume: 0.5
+      });
+
+    this.musica.play();
+
     drawPastelBg(this, C.bgTop, C.bgBot);
     addBubbles(this, 18);
     this._drawFloor();

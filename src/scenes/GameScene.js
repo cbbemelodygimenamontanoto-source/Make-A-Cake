@@ -20,9 +20,13 @@ class GameScene extends Phaser.Scene {
   }
 
   preload() {
+
+    this.load.audio('musicaFondo', 'assets/Game.mp3');
+
   }
 
   create() {
+    
     this._createBackground();
     this._createPlayer();
     this._createHUD();
